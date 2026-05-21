@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">@color/mapvinaBlue</color>
+  <color name="colorPrimaryDark">@color/mapvinaBlueDark</color>
+  <color name="colorAccent">@color/mapvinaRed</color>
+
+  <color name="materialGrey">#F5F5F5</color>
+  <color name="materialDarkGrey">#DFDFDF</color>
+
+  <color name="mapvinaWhite">#ffffff</color>
+  <color name="mapvinaCyan">#3BB2D0</color>
+  <color name="mapvinaGreen">#56B881</color>
+  <color name="mapvinaBlue">#3887BE</color>
+  <color name="mapvinaBlueDark">#1F6EA5</color>
+  <color name="mapvinaPurple">#8A8ACB</color>
+  <color name="mapvinaPurpleDark">#7171b2</color>
+  <color name="mapvinaPurpleLight">#A4A4E5</color>
+
+  <color name="mapvinaDenim">#50667F</color>
+  <color name="mapvinaTeal">#41AFA5</color>
+  <color name="mapvinaOrange">#F9886C</color>
+  <color name="mapvinaRed">#E55E5E</color>
+  <color name="mapvinaPink">#ED6498</color>
+  <color name="mapvinaMustard">#FBB03B</color>
+  <color name="mapvinaNavy">#28353D</color>
+  <color name="mapvinaNavyDark">#222B30</color>
+</resources>

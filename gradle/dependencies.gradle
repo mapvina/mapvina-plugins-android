@@ -1,0 +1,83 @@
+ ext {
+
+  androidVersions = [
+      minSdkVersion    : 21,
+      targetSdkVersion : 30,
+      compileSdkVersion: 34,
+  ]
+
+  version = [
+      mapVinaAndroidSdk : '1.0.0',
+      mapVinaJava       : '1.0.0',
+      mapVinaTurf       : '1.0.0',
+      playLocation       : '16.0.0',
+      autoValue          : '1.5.4',
+      autoValueParcel    : '0.2.6',
+      junit              : '4.12',
+      supportLib         : '28.0.0',
+      constraintLayout   : '1.1.2',
+      mockito            : '5.2.0',
+      mockk              : '1.9.3',
+      timber             : '4.7.1',
+      testRunner         : '1.0.2',
+      espresso           : '3.0.2',
+      lifecycleCompiler  : '1.1.1',
+      lifecycleExtensions: '1.1.1',
+      lifecycleLiveData  : '1.1.1',
+      room               : '1.1.0',
+      androidArchCore    : '1.1.0',
+      robolectric        : '4.10.3'
+  ]
+
+  dependenciesList = [
+          // MapVina
+          mapVinaAndroidSdk     : "io.github.mapvina:android-sdk:${version.mapVinaAndroidSdk}",
+          mapvinaGeoJson        : "io.github.mapvina:android-sdk-geojson:${version.mapvinaJava}",
+          mapvinaGeocoding      : "io.github.mapvina:android-sdk-services:${version.mapvinaJava}",
+          mapvinaTurf           : "io.github.mapvina:android-sdk-turf:${version.mapVinaTurf}",
+          mapvinaCore           : "io.github.mapvina:android-sdk-core:${version.mapVinaJava}",
+
+          // Google Play Location
+          playLocation           : "com.google.android.gms:play-services-location:${version.playLocation}",
+
+          // AutoValue
+          autoValue              : "com.google.auto.value:auto-value:${version.autoValue}",
+          autoValuesParcel       : "com.ryanharter.auto.value:auto-value-parcel:${version.autoValueParcel}",
+          autoValuesParcelAdapter: "com.ryanharter.auto.value:auto-value-parcel-adapter:${version.autoValueParcel}",
+
+          // support
+          supportAnnotation      : 'androidx.annotation:annotation:1.0.0',
+          supportAppcompatV7     : 'androidx.appcompat:appcompat:1.7.0',
+          supportV4              : 'androidx.legacy:legacy-support-v4:1.0.0',
+          supportDesign          : 'com.google.android.material:material:1.0.0',
+          supportRecyclerView    : 'androidx.recyclerview:recyclerview:1.0.0',
+          supportCardView        : 'androidx.cardview:cardview:1.0.0',
+          supportConstraintLayout: 'androidx.constraintlayout:constraintlayout:1.1.3',
+
+          // architecture
+          lifecycleExtensions    : 'androidx.lifecycle:lifecycle-extensions:2.0.0',
+          lifecycleCompiler      : "android.arch.lifecycle:compiler:${version.lifecycleCompiler}",
+          roomRuntime            : 'androidx.room:room-runtime:2.0.0',
+          roomCompiler           : 'androidx.room:room-compiler:2.0.0',
+
+          // square crew
+          timber                 : "com.jakewharton.timber:timber:${version.timber}",
+
+          // instrumentation test
+          testRunner             : 'androidx.test.ext:junit:1.1.1',
+          testRules              : 'androidx.test:rules:1.1.1',
+          testEspressoCore       : 'androidx.test.espresso:espresso-core:3.1.0',
+          testEspressoIntents    : "com.android.support.test.espresso:espresso-intents:${version.espresso}",
+          testRoom               : 'androidx.room:room-testing:2.0.0',
+          testArchCore           : 'androidx.arch.core:core-testing:2.0.0',
+          mockitoCore            : "org.mockito:mockito-core:${version.mockito}",
+          mockitoAndroid         : "org.mockito:mockito-android:${version.mockito}",
+          mockk                  : "io.mockk:mockk:${version.mockk}",
+
+          // unit test
+          junit                  : "junit:junit:${version.junit}",
+          mockito                : "org.mockito:mockito-inline:${version.mockito}",
+          androidArchCore        : 'androidx.arch.core:core-testing:2.0.0',
+          robolectric            : "org.robolectric:robolectric:${version.robolectric}"
+  ]
+}

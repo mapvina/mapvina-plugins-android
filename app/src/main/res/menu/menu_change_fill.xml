@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:mapvina="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/action_id_alpha"
+            android:title="Change alpha"
+            mapvina:showAsAction="never"/>
+    <item
+            android:id="@+id/action_id_visible"
+            android:title="Change visibility"
+            mapvina:showAsAction="never"/>
+    <item
+            android:id="@+id/action_id_points"
+            android:title="Add points"
+            mapvina:showAsAction="never"/>
+    <item
+            android:id="@+id/action_id_color"
+            android:title="Change color"
+            mapvina:showAsAction="never"/>
+    <item
+            android:id="@+id/action_id_holes"
+            android:title="Add holes"
+            mapvina:showAsAction="never"/>
+</menu>

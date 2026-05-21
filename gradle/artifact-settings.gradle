@@ -1,0 +1,37 @@
+ext {
+    mapVinaArtifactGroupId = 'io.github.mapvina'
+    mapVinaArtifactId = project.property('POM_ARTIFACT_ID')
+    mapVinaArtifactTitle = project.property('POM_NAME')
+    mapVinaArtifactDescription = project.property('POM_DESCRIPTION')
+    mapVinaDeveloperName = 'MapVina'
+    mapVinaDeveloperId = 'mapvina'
+    mapVinaArtifactUrl = 'https://github.com/mapvina/mapvina-plugins-android'
+    mapVinaArtifactVcsUrl = 'git@github.com:mapvina/mapvina-plugins-android.git'
+    mapVinaArtifactScmUrl = 'scm:git@github.com:mapvina/mapvina-plugins-android.git'
+    mapVinaArtifactLicenseName = 'BSD'
+    mapVinaArtifactLicenseUrl = 'https://opensource.org/licenses/BSD-2-Clause'
+    versionName = getVersionName()
+}
+
+def getVersionName() {
+    def cmd = "git describe --tag --abbrev=0"
+    def version = cmd.execute().text.trim()
+    return isSnapshot() ? getSnapshotVersion(version) : getReleaseVersion(version)
+}
+
+def isSnapshot() {
+    return project.hasProperty("snapshot")
+            ? project.property("snapshot").toBoolean()
+            : false
+}
+
+private static def getReleaseVersion(String version) {
+    return version.substring(1)
+}
+
+private static def getSnapshotVersion(String version) {
+    def matcher = version =~ /^[v|V](\d+).(\d+)?.*/
+    def major = (matcher[0][1] as Integer)
+    def minor = (matcher[0][2] as Integer) + 1
+    return "${major}.${minor}.0-SNAPSHOT"
+}

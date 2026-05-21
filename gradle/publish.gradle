@@ -1,0 +1,51 @@
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+apply from: '../gradle/artifact-settings.gradle'
+apply from: '../gradle/publish-root.gradle'
+
+version = project.ext.versionName
+group = project.ext.mapVinaArtifactGroupId
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                            
+                groupId this.group
+                artifactId project.ext.mapVinaArtifactId
+
+                from components.findByName('release')
+
+                version this.version
+
+                pom {
+                    name = project.ext.mapVinaArtifactTitle
+                    description = project.ext.mapVinaArtifactTitle
+                    url = project.ext.mapVinaArtifactUrl
+                    licenses {
+                        license {
+                            name = project.ext.mapVinaArtifactLicenseName
+                            url = project.ext.mapVinaArtifactLicenseUrl
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = project.ext.mapVinaDeveloperId
+                            name = project.ext.mapVinaDeveloperName
+                            email = 'mapvina@mapvina.com'
+                        }
+                    }
+                    scm {
+                        connection = project.ext.mapVinaArtifactScmUrl
+                        developerConnection = project.ext.mapVinaArtifactScmUrl
+                        url = project.ext.mapVinaArtifactUrl
+                    }
+                }            
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications
+}
