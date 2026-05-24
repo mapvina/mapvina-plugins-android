@@ -13,7 +13,7 @@ buildscript {
 
   dependencies {
     classpath 'com.android.tools.build:gradle:8.6.0'
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.20"
     classpath "org.jlleitschuh.gradle:ktlint-gradle:8.1.0"
     classpath "io.github.gradle-nexus:publish-plugin:2.0.0"
   }
@@ -21,8 +21,21 @@ buildscript {
 
 allprojects {
   repositories {
+    mavenLocal()
     google()
     mavenCentral()
+  }
+
+  plugins.withId('signing') {
+    def privateKeyFile = file("/Volumes/DATA/MapVina/private-key.asc")
+    if (privateKeyFile.exists()) {
+        def privateKey = privateKeyFile.text
+        def password = project.findProperty("signing.password") ?: System.getenv("SIGNING_PASSWORD")
+        def keyId = project.findProperty("signing.keyId") ?: "8B10EF76"
+        project.signing {
+            useInMemoryPgpKeys(keyId, privateKey, password)
+        }
+    }
   }
 }
 
@@ -47,15 +60,16 @@ task clean(type: Delete) {
 }
 
 apply from: "${rootDir}/gradle/publish-root.gradle"
-// Set up Sonatype repository
+
+// Set up Sonatype repository using Central Publisher Portal (new method)
 nexusPublishing {
     repositories {
         sonatype {
             stagingProfileId = sonatypeStagingProfileId
             username = ossrhUsername
             password = ossrhPassword
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))            
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))            
         }
     }
 }

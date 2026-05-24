@@ -1,7 +1,7 @@
-ext["signing.secretKeyRingFile"] = "${projectDir}/../signing-key.gpg"
-
-ext["ossrhUsername"] = System.getenv('OSSRH_USERNAME')
-ext["ossrhPassword"] = System.getenv('OSSRH_PASSWORD')
+// Use credentials from gradle.properties (local setup)
+ext["ossrhUsername"] = project.hasProperty('sonatypeCentralUsername') ? project.property('sonatypeCentralUsername') : System.getenv('OSSRH_USERNAME')
+ext["ossrhPassword"] = project.hasProperty('sonatypeCentralPassword') ? project.property('sonatypeCentralPassword') : System.getenv('OSSRH_PASSWORD')
 ext["sonatypeStagingProfileId"] = System.getenv('SONATYPE_STAGING_PROFILE_ID')
-ext["signing.keyId"] = System.getenv('SIGNING_KEY_ID')
-ext["signing.password"] = System.getenv('SIGNING_PASSWORD')
+ext["signing.keyId"] = project.hasProperty('signing.keyId') ? project.property('signing.keyId') : System.getenv('SIGNING_KEY_ID')
+ext["signing.password"] = project.hasProperty('signing.password') ? project.property('signing.password') : System.getenv('SIGNING_PASSWORD')
+ext["signing.secretKeyRingFile"] = project.hasProperty('signing.secretKeyRingFile') ? project.property('signing.secretKeyRingFile') : System.getenv('SIGNING_SECRET_KEY_RING_FILE')

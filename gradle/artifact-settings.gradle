@@ -14,8 +14,16 @@ ext {
 }
 
 def getVersionName() {
+    def envVersion = System.getenv('VERSION') ?: System.getenv('VERSION_NAME')
+    if (envVersion) {
+        return envVersion
+    }
     def cmd = "git describe --tag --abbrev=0"
     def version = cmd.execute().text.trim()
+    if (version.isEmpty()) {
+        // Fallback to VERSION_NAME from gradle.properties if no git tag
+        return project.hasProperty('VERSION_NAME') ? project.property('VERSION_NAME') : '1.0.0'
+    }
     return isSnapshot() ? getSnapshotVersion(version) : getReleaseVersion(version)
 }
 
