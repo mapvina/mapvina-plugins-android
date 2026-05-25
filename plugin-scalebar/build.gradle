@@ -22,7 +22,7 @@ android {
     testOptions {
         unitTests.returnDefaultValues true
     }
-    namespace 'com.mapvina.android.plugins.scalebar'
+    namespace 'io.github.mapvina.android.plugins.scalebar'
 }
 
 kotlin {

@@ -3,12 +3,12 @@
     <application>
         <!-- Offline download region picker activity -->
         <activity
-            android:name="com.mapvina.android.plugins.offline.ui.OfflineActivity"
+            android:name="io.github.mapvina.android.plugins.offline.ui.OfflineActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 
         <!-- Offline download service -->
         <service
-            android:name="com.mapvina.android.plugins.offline.offline.OfflineDownloadService"
+            android:name="io.github.mapvina.android.plugins.offline.offline.OfflineDownloadService"
             android:exported="false" />
     </application>
 </manifest>

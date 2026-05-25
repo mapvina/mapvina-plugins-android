@@ -400,15 +400,15 @@ const annotationManagerJavaUnitTests = ejs.compile(fs.readFileSync('plugin-annot
 
 for (const layer of layers) {
   if(layer.type === "symbol" || layer.type === "circle" || layer.type === "fill" || layer.type === "line"){
-      writeIfModified(`plugin-annotation/src/main/java/org/mapvina/android/plugins/annotation/On${camelize(layer.type)}DragListener.java`, annotationDragListener(layer));
-      writeIfModified(`plugin-annotation/src/main/java/org/mapvina/android/plugins/annotation/On${camelize(layer.type)}ClickListener.java`, annotationClickListener(layer));
-      writeIfModified(`plugin-annotation/src/main/java/org/mapvina/android/plugins/annotation/On${camelize(layer.type)}LongClickListener.java`, annotationLongClickListener(layer));
-      writeIfModified(`plugin-annotation/src/main/java/org/mapvina/android/plugins/annotation/${camelize(layer.type)}.java`, annotationJava(layer));
-      writeIfModified(`plugin-annotation/src/main/java/org/mapvina/android/plugins/annotation/${camelize(layer.type)}Options.java`, annotationOptionsJava(layer));
-      writeIfModified(`plugin-annotation/src/main/java/org/mapvina/android/plugins/annotation/${camelize(layer.type)}Manager.java`, annotationManagerJava(layer));
-      writeIfModified(`plugin-annotation/src/main/java/org/mapvina/android/plugins/annotation/${camelize(layer.type)}ElementProvider.java`, annotationElementProvider(layer));
-      writeIfModified(`app/src/androidTest/java/org/mapvina/android/plugins/annotation/${camelize(layer.type)}Test.java`, annotationJavaInstrumentationTests(layer));
-      writeIfModified(`app/src/androidTest/java/org/mapvina/android/plugins/annotation/${camelize(layer.type)}ManagerTest.java`, annotationManagerJavaInstrumentationTests(layer));
-      writeIfModified(`plugin-annotation/src/test/java/org/mapvina/android/plugins/annotation/${camelize(layer.type)}ManagerTest.java`, annotationManagerJavaUnitTests(layer));
+      writeIfModified(`plugin-annotation/src/main/java/io/github/mapvina/android/plugins/annotation/On${camelize(layer.type)}DragListener.java`, annotationDragListener(layer));
+      writeIfModified(`plugin-annotation/src/main/java/io/github/mapvina/android/plugins/annotation/On${camelize(layer.type)}ClickListener.java`, annotationClickListener(layer));
+      writeIfModified(`plugin-annotation/src/main/java/io/github/mapvina/android/plugins/annotation/On${camelize(layer.type)}LongClickListener.java`, annotationLongClickListener(layer));
+      writeIfModified(`plugin-annotation/src/main/java/io/github/mapvina/android/plugins/annotation/${camelize(layer.type)}.java`, annotationJava(layer));
+      writeIfModified(`plugin-annotation/src/main/java/io/github/mapvina/android/plugins/annotation/${camelize(layer.type)}Options.java`, annotationOptionsJava(layer));
+      writeIfModified(`plugin-annotation/src/main/java/io/github/mapvina/android/plugins/annotation/${camelize(layer.type)}Manager.java`, annotationManagerJava(layer));
+      writeIfModified(`plugin-annotation/src/main/java/io/github/mapvina/android/plugins/annotation/${camelize(layer.type)}ElementProvider.java`, annotationElementProvider(layer));
+      writeIfModified(`app/src/androidTest/java/io/github/mapvina/android/plugins/annotation/${camelize(layer.type)}Test.java`, annotationJavaInstrumentationTests(layer));
+      writeIfModified(`app/src/androidTest/java/io/github/mapvina/android/plugins/annotation/${camelize(layer.type)}ManagerTest.java`, annotationManagerJavaInstrumentationTests(layer));
+      writeIfModified(`plugin-annotation/src/test/java/io/github/mapvina/android/plugins/annotation/${camelize(layer.type)}ManagerTest.java`, annotationManagerJavaUnitTests(layer));
   }
 }

@@ -23,7 +23,7 @@ android {
     testOptions {
         unitTests.returnDefaultValues true
     }
-    namespace 'com.mapvina.android.plugins.maps'
+    namespace 'io.github.mapvina.android.plugins.maps'
 
     tasks.withType(Javadoc).all {
         enabled = false

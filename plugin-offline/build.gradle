@@ -20,7 +20,7 @@ android {
 
     // Avoid naming conflicts
     resourcePrefix 'mapvina_'
-    namespace 'com.mapvina.android.plugins.offline'
+    namespace 'io.github.mapvina.android.plugins.offline'
 }
 
 dependencies {

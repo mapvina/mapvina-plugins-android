@@ -16,7 +16,7 @@ android {
   lintOptions {
     abortOnError false
   }
-  namespace 'com.mapvina.android.plugins.building'
+  namespace 'io.github.mapvina.android.plugins.building'
 }
 
 dependencies {

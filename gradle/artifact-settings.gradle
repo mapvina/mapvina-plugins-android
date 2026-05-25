@@ -5,7 +5,7 @@ ext {
     mapVinaArtifactDescription = project.property('POM_DESCRIPTION')
     mapVinaDeveloperName = 'MapVina'
     mapVinaDeveloperId = 'mapvina'
-    mapVinaArtifactUrl = 'https://github.com/mapvina/mapvina-plugins-android'
+    mapVinaArtifactUrl = 'https://github.io/github/mapvina/mapvina-plugins-android'
     mapVinaArtifactVcsUrl = 'git@github.com:mapvina/mapvina-plugins-android.git'
     mapVinaArtifactScmUrl = 'scm:git@github.com:mapvina/mapvina-plugins-android.git'
     mapVinaArtifactLicenseName = 'BSD'

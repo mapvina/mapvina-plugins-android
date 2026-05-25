@@ -9,7 +9,7 @@ android {
   defaultConfig {
     minSdkVersion androidVersions.minSdkVersion
     targetSdkVersion androidVersions.targetSdkVersion
-    applicationId "com.mapvina.android.plugins.testapp"
+    applicationId "io.github.mapvina.android.plugins.testapp"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     vectorDrawables.useSupportLibrary = true
 
@@ -37,7 +37,7 @@ android {
     viewBinding true
     buildConfig true
   }
-  namespace 'com.mapvina.android.plugins.testapp'
+  namespace 'io.github.mapvina.android.plugins.testapp'
 }
 
 kotlin {

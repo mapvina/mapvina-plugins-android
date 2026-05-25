@@ -20,7 +20,7 @@ android {
     testOptions {
         unitTests.returnDefaultValues true
     }
-    namespace 'com.mapvina.android.plugins.annotation'
+    namespace 'io.github.mapvina.android.plugins.annotation'
 }
 
 dependencies {

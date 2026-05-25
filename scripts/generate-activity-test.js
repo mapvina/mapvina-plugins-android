@@ -14,10 +14,10 @@ global.camelize = function (str) {
 }
 
 const excludeClasses = JSON.parse(fs.readFileSync('scripts/exclude-activity-gen.json', 'utf8'));
-const appBasePath = 'app/src/main/java/org/mapvina/android/plugins/testapp/activity';
-const testBasePath = 'app/src/androidTest/java/org/mapvina/android/plugins/gen';
+const appBasePath = 'app/src/main/java/io/github/mapvina/android/plugins/testapp/activity';
+const testBasePath = 'app/src/androidTest/java/io/github/mapvina/android/plugins/gen';
 const subPackages = fs.readdirSync(appBasePath);
-const ejsConversionTask = ejs.compile(fs.readFileSync('app/src/androidTest/java/org/mapvina/android/plugins/activity.junit.ejs', 'utf8'), {strict: true});
+const ejsConversionTask = ejs.compile(fs.readFileSync('app/src/androidTest/java/io/github/mapvina/android/plugins/activity.junit.ejs', 'utf8'), {strict: true});
 
 if (!fs.existsSync(testBasePath)){
   fs.mkdirSync(testBasePath);

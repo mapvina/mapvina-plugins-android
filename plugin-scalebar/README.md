@@ -37,15 +37,15 @@ dependencies {
 
 ## Scale bar plugin examples
 
-- [In this repo's test app](https://github.com/mapvina/mapvina-plugins-android/blob/main/app/src/main/java/org/mapvina/android/plugins/testapp/activity/scalebar/ScalebarActivity.kt)
+- [In this repo's test app](https://github.io/github/mapvina/mapvina-plugins-android/blob/main/app/src/main/java/io/github/mapvina/android/plugins/testapp/activity/scalebar/ScalebarActivity.kt)
 
 ## Help and Usage
 
-This repository includes an app that shows how to use each plugins in this repository. [Check out its code](https://github.com/mapvina/mapvina-plugins-android/tree/main/app/src/main/java/org/mapvina/android/plugins/testapp/activity) for ready-to-use snippets.
+This repository includes an app that shows how to use each plugins in this repository. [Check out its code](https://github.io/github/mapvina/mapvina-plugins-android/tree/main/app/src/main/java/io/github/mapvina/android/plugins/testapp/activity) for ready-to-use snippets.
 
 Plugins are easy to use. A plugin is simply a library module built on top of the MapVina Maps SDK for Android. Currently, we are not requiring plugins to register themselves or to implement any specific interfaces so that they're simple to consume.
 
-We'd love to [hear your feedback](https://github.com/mapvina/mapvina-plugins-android/issues) as we build more plugins and learn how you use them.
+We'd love to [hear your feedback](https://github.io/github/mapvina/mapvina-plugins-android/issues) as we build more plugins and learn how you use them.
 
 ## Why Plugins
 
@@ -58,4 +58,4 @@ Plugins' lightweight nature makes them much easier for you and anyone else to co
 
 We welcome contributions to this plugin repository!
 
-If you're interested in building and sharing your own plugin, please read [the contribution guide](https://github.com/mapvina/mapvina-plugins-android/blob/main/CONTRIBUTING.md) to learn how to get started.
+If you're interested in building and sharing your own plugin, please read [the contribution guide](https://github.io/github/mapvina/mapvina-plugins-android/blob/main/CONTRIBUTING.md) to learn how to get started.

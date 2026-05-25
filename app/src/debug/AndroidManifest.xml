@@ -11,7 +11,7 @@
 
   <application>
     <activity
-        android:name="com.mapvina.android.plugins.testapp.activity.TestActivity"
+        android:name="io.github.mapvina.android.plugins.testapp.activity.TestActivity"
         android:label="@string/title_activity_test"
         android:theme="@style/AppTheme.NoActionBar"/>
   </application>

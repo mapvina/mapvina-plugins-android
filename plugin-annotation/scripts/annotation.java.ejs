@@ -5,7 +5,7 @@
 -%>
 // This file is generated.
 
-package com.mapvina.android.plugins.annotation;
+package io.github.mapvina.android.plugins.annotation;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
@@ -17,19 +17,19 @@ import android.graphics.PointF;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
-import com.mapvina.geojson.*;
-import com.mapvina.android.geometry.LatLng;
-import com.mapvina.android.style.layers.Property;
-import com.mapvina.android.style.layers.PropertyFactory;
-import com.mapvina.android.utils.ColorUtils;
-import com.mapvina.android.gestures.MoveDistancesObject;
-import com.mapvina.android.maps.Projection;
+import io.github.mapvina.geojson.*;
+import io.github.mapvina.android.geometry.LatLng;
+import io.github.mapvina.android.style.layers.Property;
+import io.github.mapvina.android.style.layers.PropertyFactory;
+import io.github.mapvina.android.utils.ColorUtils;
+import io.github.mapvina.android.gestures.MoveDistancesObject;
+import io.github.mapvina.android.maps.Projection;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.mapvina.android.constants.GeometryConstants.MAX_MERCATOR_LATITUDE;
-import static com.mapvina.android.constants.GeometryConstants.MIN_MERCATOR_LATITUDE;
+import static io.github.mapvina.android.constants.GeometryConstants.MAX_MERCATOR_LATITUDE;
+import static io.github.mapvina.android.constants.GeometryConstants.MIN_MERCATOR_LATITUDE;
 
 @UiThread
 public class <%- camelize(type) %> extends Annotation<<%- geometryType(type) %>> {

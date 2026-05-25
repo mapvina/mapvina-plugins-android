@@ -5,30 +5,30 @@
 -%>
 // This file is generated.
 
-package com.mapvina.android.plugins.annotation;
+package io.github.mapvina.android.plugins.annotation;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.UiThread;
 import androidx.annotation.VisibleForTesting;
 
-import com.mapvina.geojson.Feature;
-import com.mapvina.geojson.FeatureCollection;
-import com.mapvina.android.maps.MapView;
-import com.mapvina.android.maps.MapVinaMap;
-import com.mapvina.android.maps.Style;
-import com.mapvina.android.style.expressions.Expression;
-import com.mapvina.android.style.layers.<%- camelize(type) %>Layer;
-import com.mapvina.android.style.layers.PropertyValue;
-import com.mapvina.android.style.layers.PropertyFactory;
-import com.mapvina.android.style.sources.GeoJsonOptions;
-import com.mapvina.android.style.layers.Property;
+import io.github.mapvina.geojson.Feature;
+import io.github.mapvina.geojson.FeatureCollection;
+import io.github.mapvina.android.maps.MapView;
+import io.github.mapvina.android.maps.MapVinaMap;
+import io.github.mapvina.android.maps.Style;
+import io.github.mapvina.android.style.expressions.Expression;
+import io.github.mapvina.android.style.layers.<%- camelize(type) %>Layer;
+import io.github.mapvina.android.style.layers.PropertyValue;
+import io.github.mapvina.android.style.layers.PropertyFactory;
+import io.github.mapvina.android.style.sources.GeoJsonOptions;
+import io.github.mapvina.android.style.layers.Property;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.mapvina.android.style.expressions.Expression.get;
-import static com.mapvina.android.style.layers.PropertyFactory.*;
+import static io.github.mapvina.android.style.expressions.Expression.get;
+import static io.github.mapvina.android.style.layers.PropertyFactory.*;
 
 /**
  * The <%- type %> manager allows to add <%- type %>s to a map.

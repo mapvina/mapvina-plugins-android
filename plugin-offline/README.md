@@ -37,13 +37,13 @@ dependencies {
 
 ## Offline plugin examples
 
-- [In this repo's test app](https://github.com/mapvina/mapvina-plugins-android/tree/main/app/src/main/java/org/mapvina/android/plugins/testapp/activity/offline)
+- [In this repo's test app](https://github.io/github/mapvina/mapvina-plugins-android/tree/main/app/src/main/java/io/github/mapvina/android/plugins/testapp/activity/offline)
 
 ## Help and Usage
 
-This repository includes an app that shows how to use each plugins in this repository. [Check out its code](https://github.com/mapvina/mapvina-plugins-android/tree/main/app/src/main/java/org/mapvina/android/plugins/testapp/activity) for ready-to-use snippets.
+This repository includes an app that shows how to use each plugins in this repository. [Check out its code](https://github.io/github/mapvina/mapvina-plugins-android/tree/main/app/src/main/java/io/github/mapvina/android/plugins/testapp/activity) for ready-to-use snippets.
 
-We'd love to [hear your feedback](https://github.com/mapvina/mapvina-plugins-android/issues) as we build more plugins and learn how you use them.
+We'd love to [hear your feedback](https://github.io/github/mapvina/mapvina-plugins-android/issues) as we build more plugins and learn how you use them.
 
 ## Why Plugins
 
@@ -56,4 +56,4 @@ Plugins' lightweight nature makes them much easier for you and anyone else to co
 
 We welcome contributions to this plugin repository!
 
-If you're interested in geojson and sharing your own plugin, please read [the contribution guide](https://github.com/mapvina/mapvina-plugins-android/blob/main/CONTRIBUTING.md) to learn how to get started.
+If you're interested in geojson and sharing your own plugin, please read [the contribution guide](https://github.io/github/mapvina/mapvina-plugins-android/blob/main/CONTRIBUTING.md) to learn how to get started.
