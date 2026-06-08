@@ -1,7 +1,7 @@
  ext {
 
   androidVersions = [
-      minSdkVersion    : 21,
+      minSdkVersion    : 23,
       targetSdkVersion : 30,
       compileSdkVersion: 34,
   ]
@@ -31,11 +31,11 @@
 
   dependenciesList = [
           // MapVina
-          mapVinaAndroidSdk     : "io.github.mapvina:android-sdk:${version.mapVinaAndroidSdk}",
+          mapVinaAndroidSdk     : "io.github.mapvina:android-sdk-opengl:${version.mapVinaAndroidSdk}",
           mapvinaGeoJson        : "io.github.mapvina:android-sdk-geojson:${version.mapvinaJava}",
           mapvinaGeocoding      : "io.github.mapvina:android-sdk-services:${version.mapvinaJava}",
           mapvinaTurf           : "io.github.mapvina:android-sdk-turf:${version.mapVinaTurf}",
-          mapvinaCore           : "io.github.mapvina:android-sdk-core:${version.mapVinaJava}",
+          mapvinaCore           : "io.github.mapvina:android-sdk:${version.mapVinaAndroidSdk}",
 
           // Google Play Location
           playLocation           : "com.google.android.gms:play-services-location:${version.playLocation}",

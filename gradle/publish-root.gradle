@@ -1,6 +1,18 @@
 // Use credentials from gradle.properties (local setup)
-ext["ossrhUsername"] = project.hasProperty('sonatypeCentralUsername') ? project.property('sonatypeCentralUsername') : System.getenv('OSSRH_USERNAME')
-ext["ossrhPassword"] = project.hasProperty('sonatypeCentralPassword') ? project.property('sonatypeCentralPassword') : System.getenv('OSSRH_PASSWORD')
+def resolveUsername() {
+    if (project.hasProperty('sonatypeCentralUsername')) return project.property('sonatypeCentralUsername')
+    if (project.hasProperty('sonatypeMavenCentralUser')) return project.property('sonatypeMavenCentralUser')
+    if (System.getenv('OSSRH_USERNAME')) return System.getenv('OSSRH_USERNAME')
+    return ''
+}
+def resolvePassword() {
+    if (project.hasProperty('sonatypeCentralPassword')) return project.property('sonatypeCentralPassword')
+    if (project.hasProperty('sonatypeMavenCentralPassword')) return project.property('sonatypeMavenCentralPassword')
+    if (System.getenv('OSSRH_PASSWORD')) return System.getenv('OSSRH_PASSWORD')
+    return ''
+}
+ext["ossrhUsername"] = resolveUsername()
+ext["ossrhPassword"] = resolvePassword()
 ext["sonatypeStagingProfileId"] = System.getenv('SONATYPE_STAGING_PROFILE_ID')
 ext["signing.keyId"] = project.hasProperty('signing.keyId') ? project.property('signing.keyId') : System.getenv('SIGNING_KEY_ID')
 ext["signing.password"] = project.hasProperty('signing.password') ? project.property('signing.password') : System.getenv('SIGNING_PASSWORD')

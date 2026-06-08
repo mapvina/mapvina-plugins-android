@@ -51,7 +51,6 @@ dependencies {
     exclude group: 'com.google.android.gms'
   })
   implementation dependenciesList.mapvinaTurf
-  implementation dependenciesList.mapvinaCore
 
   // Architecture
   implementation dependenciesList.lifecycleExtensions
