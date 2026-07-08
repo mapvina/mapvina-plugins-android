@@ -27,7 +27,8 @@ allprojects {
   }
 
   plugins.withId('signing') {
-    def privateKeyFile = file("/Volumes/DATA/MapVina/private-key.asc")
+    def signingKeyPath = project.findProperty("signing.secretKeyFile") ?: System.getenv("SIGNING_SECRET_KEY_FILE") ?: "${System.getProperty('user.home')}/.mapvina-secrets/private-key.asc"
+    def privateKeyFile = file(signingKeyPath)
     if (privateKeyFile.exists()) {
         def privateKey = privateKeyFile.text
         def password = project.findProperty("signing.password") ?: System.getenv("SIGNING_PASSWORD")
