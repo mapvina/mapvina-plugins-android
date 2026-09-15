@@ -7,7 +7,7 @@
   ]
 
   version = [
-      mapVinaAndroidSdk : '1.0.0',
+      mapVinaAndroidSdk : '1.0.2',
       mapVinaJava       : '1.0.0',
       mapVinaTurf       : '1.0.0',
       playLocation       : '16.0.0',
