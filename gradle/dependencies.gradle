@@ -8,8 +8,8 @@
 
   version = [
       mapVinaAndroidSdk : '1.0.2',
-      mapVinaJava       : '1.0.0',
-      mapVinaTurf       : '1.0.0',
+      mapVinaJava       : '1.0.1',
+      mapVinaTurf       : '1.0.1',
       playLocation       : '16.0.0',
       autoValue          : '1.5.4',
       autoValueParcel    : '0.2.6',
