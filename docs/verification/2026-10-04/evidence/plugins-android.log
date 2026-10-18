@@ -1,0 +1,31 @@
+Raw log SHA-256: ef0e0dc5c819cdfe8e1eae60b9c470b2da79d3efcb60e779d4d5fa0d281fc006
+Excerpt only; full output retained outside Git in the local audit directory.
+
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+> Task :plugin-annotation:preBuild UP-TO-DATE
+> Task :plugin-annotation:preDebugBuild UP-TO-DATE
+> Task :plugin-annotation:mergeDebugJniLibFolders UP-TO-DATE
+> Task :plugin-annotation:mergeDebugNativeLibs NO-SOURCE
+> Task :plugin-annotation:stripDebugDebugSymbols NO-SOURCE
+... selected diagnostic lines ...
+BUILD SUCCESSFUL in 9s
+EXIT_CODE=0
+... final output ...
+> Task :plugin-annotation:mergeDebugShaders UP-TO-DATE
+> Task :plugin-annotation:compileDebugShaders NO-SOURCE
+> Task :plugin-annotation:generateDebugAssets UP-TO-DATE
+> Task :plugin-annotation:packageDebugAssets UP-TO-DATE
+> Task :plugin-annotation:prepareDebugArtProfile UP-TO-DATE
+> Task :plugin-annotation:prepareLintJarForPublish UP-TO-DATE
+> Task :plugin-annotation:processDebugManifest UP-TO-DATE
+> Task :plugin-annotation:processDebugJavaRes NO-SOURCE
+> Task :plugin-annotation:mergeDebugJavaResource UP-TO-DATE
+> Task :plugin-annotation:syncDebugLibJars UP-TO-DATE
+> Task :plugin-annotation:writeDebugAarMetadata UP-TO-DATE
+> Task :plugin-annotation:bundleDebugAar UP-TO-DATE
+> Task :plugin-annotation:assembleDebug UP-TO-DATE
+
+BUILD SUCCESSFUL in 9s
+22 actionable tasks: 22 up-to-date
+
+EXIT_CODE=0
